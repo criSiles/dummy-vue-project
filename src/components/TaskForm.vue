@@ -36,7 +36,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 form {
   max-width: 40rem;
   margin: 1.25rem auto; /* Responsive measurement */
@@ -46,6 +46,8 @@ form {
   grid-template-columns: 3fr 1fr; /* Adjusted grid-template-columns ratio */
   gap: 1rem; /* You can use rem for better scalability on different devices */
   padding: 1rem; /* Add some padding to the form */
+  margin-top: 5.5rem;
+  padding-bottom: 0.4rem;
 }
 
 form button {

@@ -210,10 +210,11 @@ export default {
   display: inline-block;
   background: orange;
   border: 0;
-  padding: 10px;
+  padding: 0.625rem;
   margin-left: 1vw;
+  margin-bottom: 0.5rem;
   font-family: "Poppins";
-  border-radius: 6px;
+  border-radius: 0.375rem;
   cursor: pointer;
   font-size: 1.1em;
   color: white;
