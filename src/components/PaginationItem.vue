@@ -130,6 +130,7 @@ export default defineComponent({
 }
 
 .pagination-button {
+  margin-top: 1rem;
   background: orange;
   border: 0;
   padding: 10px;

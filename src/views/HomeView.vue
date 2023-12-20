@@ -1,48 +1,13 @@
 <template>
-    <main>
-        <ToDoHeader/>
-        <!-- New task form-->
-        <div class="new-task-form">
-            <TaskForm />
-        </div>
-
-        <!-- Task list with details-->
-        <TaskList :tasks="tasks" :loading="loading" />
-    </main>
+    <GeneralHeader/>
+    <h1>Hey! I'm Cristina welcome to my website</h1>
 </template>
-
 <script>
-import ToDoHeader from "@/components/ToDoHeader.vue";
-import TaskList from "@/components/TaskList.vue";
-import TaskForm from "@/components/TaskForm.vue";
-import { useTaskStore } from "@/stores/TaskStore";
-import { storeToRefs } from 'pinia';
-
+import GeneralHeader from '@/components/GeneralHeader.vue';
 export default {
-    name: "HomeView",
+    name: "ProjectsView",
     components: {
-    TaskForm,
-    TaskList,
-    ToDoHeader
-},
-    setup() {
-        const taskStore = useTaskStore();
-        const { tasks, loading } = storeToRefs(taskStore);
-
-        taskStore.fetchTasks();
-
-        return { taskStore, tasks, loading };
-    },
-};
-</script>
-
-<style>
-#app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
+    GeneralHeader,
+    }
 }
-</style>
+</script>
