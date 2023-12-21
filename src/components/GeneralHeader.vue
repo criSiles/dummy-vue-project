@@ -212,6 +212,7 @@ body {
     height: 100%;
     background-color: #f2f2f2;
     padding-right: 40px;
+    padding-bottom: 40rem;
   }
 }
 </style>

@@ -6,7 +6,7 @@
 <script>
 import GeneralHeader from '@/components/GeneralHeader.vue';
 export default {
-    name: "ProjectsView",
+    name: "ProjectsWip",
     components: {
     GeneralHeader,
     }

@@ -5,7 +5,8 @@ import ToDoView from "../views/ToDoView.vue"
 import HomeView from "../views/HomeView.vue"
 import ContactView from "../views/ContactView.vue"
 import AboutMeView from "../views/AboutMeView.vue"
-import ProjectsView from "../views/ProjectsView.vue"
+import ProjectsWipView from "../views/ProjectsWipView.vue"
+import ProjectsDisplayView from "../views/ProjectsDisplayView.vue"
 
 const routes = [
   {
@@ -24,10 +25,14 @@ const routes = [
     component: ContactView,
   },
   {
+    path: "/workinprogress",
+    name: "ProjectsWip",
+    component: ProjectsWipView,
+  },
+  {
     path: "/projects",
-    name: "Projects",
-    component: ProjectsView,
-    redirect: {name: "ToDo"}
+    name: "ProjectsDisplay",
+    component: ProjectsDisplayView,
   },
   {
     path: "/todo",

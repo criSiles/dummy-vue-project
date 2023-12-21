@@ -8,7 +8,7 @@ import GeneralHeader from '@/components/GeneralHeader.vue';
 import JSConfetti from 'js-confetti';
 
 export default {
-    name: "ProjectsView",
+    name: "HomeView",
     components: {
         GeneralHeader,
     },
