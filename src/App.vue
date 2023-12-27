@@ -1,16 +1,17 @@
 <template>
 
   <router-view :key="$route.fullPath"/>
-  
 </template>
 
 <script>
 import { defineComponent } from "vue";
+import GeneralFooter from "./components/GeneralFooter.vue";
 
 export default defineComponent({
   name: "App",
-  components: { 
-  },
+  components: {
+    GeneralFooter
+},
 });
 </script>
 
