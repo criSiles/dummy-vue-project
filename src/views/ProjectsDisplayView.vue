@@ -34,14 +34,17 @@
         ><p>Click here</p>
       </router-link>
     </div>
+    <GeneralFooter />
   </main>
 </template>
 <script>
 import GeneralHeader from "@/components/GeneralHeader.vue";
+import GeneralFooter from "@/components/GeneralFooter.vue";
 export default {
   name: "ProjectsDisplay",
   components: {
     GeneralHeader,
+    GeneralFooter,
   },
 };
 </script>
@@ -51,7 +54,7 @@ body {
   font-family: "Poppins";
   background: #f5f5f5;
 }
-.container{
+.container {
   display: flex;
 }
 
@@ -84,13 +87,13 @@ main > h2 {
     margin-top: 1.5rem;
     margin-bottom: -0.2rem;
   }
-  .container{
+  .container {
     flex-direction: column;
-    align-items:center;
-    justify-content: space-evenly
+    align-items: center;
+    justify-content: space-evenly;
   }
-.card{
-margin-bottom: 3rem;
-}
+  .card {
+    margin-bottom: 3rem;
+  }
 }
 </style>

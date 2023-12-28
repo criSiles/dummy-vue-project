@@ -5,12 +5,10 @@
 
 <script>
 import { defineComponent } from "vue";
-import GeneralFooter from "./components/GeneralFooter.vue";
 
 export default defineComponent({
   name: "App",
   components: {
-    GeneralFooter
 },
 });
 </script>

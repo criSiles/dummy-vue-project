@@ -5,12 +5,10 @@
     </header>
     <main class="grid">
       <div class="column">
-        <img src="../assets/cris_surf.jpg" alt="Surf" />
-        <img src="../assets/cris_fest.jpg" alt="Fest" />
-      </div>
-      <div class="column">
-        <img src="../assets/cris_mountain.jpg" alt="Mountain" />
-        <img src="../assets/cris_climber.jpg" alt="Climber" />
+        <img class="img" src="../assets/cris_surf.jpg" alt="Surf" />
+        <img class="img" src="../assets/cris_fest.jpg" alt="Fest" />
+        <img class="img" src="../assets/cris_mountain.jpg" alt="Mountain" />
+        <img class="img" src="../assets/cris_climber.jpg" alt="Climber" />
       </div>
       <div class="aboutme">
         <h2>About me</h2>
@@ -36,7 +34,7 @@
         <p>Stay tuned for updates!</p>
       </div>
     </main>
-  </body>
+      </body>
 </template>
 
 <script scoped>
@@ -45,7 +43,7 @@ export default {
   name: "AboutMeView",
   components: {
     GeneralHeader,
-  },
+      },
 };
 </script>
 
@@ -55,7 +53,6 @@ export default {
 body {
   margin: 0;
   font-family: "Poppins";
-  background: #f5f5f5;
 }
 .grid {
   display: grid;
@@ -68,7 +65,6 @@ header {
 .column {
   grid-column: span 3;
   max-width: 100%;
-  grid-column: span 3;
 }
 .column img {
   vertical-align: middle;
@@ -77,7 +73,6 @@ header {
 }
 
 main {
-  /* max-width: 1200px; */
   margin: 60px auto;
   padding: 20px;
 }

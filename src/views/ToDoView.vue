@@ -20,6 +20,9 @@ import { storeToRefs } from 'pinia';
 
 export default {
     name: "ToDoView",
+    meta:{
+        hideFooter: true,
+    },
     components: {
     TaskForm,
     TaskList,

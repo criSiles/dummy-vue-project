@@ -34,7 +34,12 @@
 </template>
 
 <script>
+import GeneralFooter from "@/components/GeneralFooter.vue";
+
 export default {
+  components: {
+    GeneralFooter,
+  },
   data() {
     return {
       email: "",
@@ -60,7 +65,7 @@ margin-bottom: 5rem;
 form {
   font-family: "Poppins";
   max-width: 40rem;
-  margin: 1.25rem auto;
+  margin: 1.8rem auto;
   margin-top: 5rem;
   background: white;
   text-align: left;
@@ -126,7 +131,7 @@ input[type="checkbox"] {
   margin-bottom: 1.8rem
 }
 .terms{
-  font-size: 0.9rem;
+  font-size: 0.7rem;
 }
 .accept{
   flex-direction: column;
