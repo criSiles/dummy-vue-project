@@ -8,20 +8,20 @@
       <h3>To Do</h3>
       <p>
         This is a website where you can find a To Do list. In this part you
-        could add a new to do, mark as fav, delete it and add notes.
+        could add a new to do, mark it as fav, delete it and add notes.
       </p>
       <router-link class="link" :to="{ name: 'ToDo' }"
-        ><p>Click here</p>
+        ><p>Click here to go to the web</p>
       </router-link>
     </div>
     <div class="card">
       <h3>Second Hand Shop</h3>
       <p>
         This is a second hand shop website. You can see all the products, make a
-        search for specifics and post a product to sell.
+        search for a specific product and post a product to sell.
       </p>
       <router-link class="link" :to="{ name: 'ProjectsWip' }"
-        ><p>Click here</p>
+        ><p>Click here to go to the web</p>
       </router-link>
     </div>
     <div class="card">
@@ -31,10 +31,10 @@
         what other people are thinking or doing.
       </p>
       <router-link class="link" :to="{ name: 'ProjectsWip' }"
-        ><p>Click here</p>
+        ><p>Click here to go to the web</p>
       </router-link>
     </div>
-    <GeneralFooter />
+    <GeneralFooter class="footer" />
   </main>
 </template>
 <script>
@@ -79,9 +79,15 @@ main > h2 {
 }
 .link {
   text-decoration: none;
-  color: royalblue;
+  color: #0e2431;
 }
 
+.link:hover {
+  color: royalblue;
+}
+.footer {
+  position: absolute;
+}
 @media screen and (max-width: 960px) {
   main > h2 {
     margin-top: 1.5rem;
@@ -94,6 +100,9 @@ main > h2 {
   }
   .card {
     margin-bottom: 3rem;
+  }
+  .footer {
+    position: relative;
   }
 }
 </style>

@@ -74,7 +74,7 @@ form {
   border-radius: 10px;
 }
 label {
-  color: #555;
+  color:  #0e2431;
   display: inline-block;
   margin: 25px 0 15px;
   font-size: 1em;
@@ -90,7 +90,7 @@ select {
   border: 0;
   border-radius: 0.375rem;
   border-bottom: 1px solid #ddd;
-  color: #555;
+  color:  #0e2431;
   font-size: 1em;
 }
 
@@ -112,13 +112,13 @@ input[type="checkbox"] {
   border: 4px solid #ddd;
   font-size: 0.9rem;
   background-color:#ddd;
-  color:#555;
+  color: #0e2431;
 }
 
 .submit button:hover {
-  background-color: #555;
+  background-color:  #0e2431;
   color: #ddd;
-  border: 4px solid #555;
+  border: 4px solid  #0e2431;
 }
 @media screen and (max-width: 768px) {
   .contact{

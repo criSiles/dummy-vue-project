@@ -1,16 +1,8 @@
 <template>
   <body>
-    <header>
-      <GeneralHeader />
-    </header>
+    <GeneralHeader />
     <main class="grid">
-      <div class="column">
-        <img class="img" src="../assets/cris_surf.jpg" alt="Surf" />
-        <img class="img" src="../assets/cris_fest.jpg" alt="Fest" />
-        <img class="img" src="../assets/cris_mountain.jpg" alt="Mountain" />
-        <img class="img" src="../assets/cris_climber.jpg" alt="Climber" />
-      </div>
-      <div class="aboutme">
+      <article class="aboutme">
         <h2>About me</h2>
         <p>
           Hi! I'm Cristina, a chemist from Málaga who moved to Barcelona in
@@ -19,7 +11,8 @@
         <p>
           After 3 years in the fragrance industry, where I learnt a bit about
           perfumes and a lot about teamwork, project management, strong
-          organization skills and other professional aptitudes, I discovered programming and I embarked on a Web Development Bootcamp through a
+          organization skills and other professional aptitudes, I discovered
+          programming and I embarked on a Web Development Bootcamp through a
           Women in Tech scholarship.
         </p>
         <p>
@@ -32,18 +25,48 @@
           continually evolve everytime I learn something new.
         </p>
         <p>Stay tuned for updates!</p>
-      </div>
+      </article>
+
+      <article class="featured">
+        <h2>Hobbies</h2>
+        <p>
+          I like having an active lifestyle. Although, I'm not an expert in any
+          particular activity, I find joy in exploring a diverse array of
+          pursuits. These are some pictures of my many passions.
+          Furthermore, I also like to snowboarding, play padel, indoor cycling,
+          to play board games, to see tv shows and to read.
+        </p>
+        <article>
+          <img src="../assets/cris_surf.jpg" alt="article img" />
+          <h4>Surfing</h4>
+        </article>
+        <article>
+          <img src="../assets/cris_fest.jpg" alt="article img" />
+          <h4>Live Music</h4>
+        </article>
+        <article>
+          <img src="../assets/cris_climber.jpg" alt="article img" />
+          <h4>Indor Climbing</h4>
+        </article>
+        <article>
+          <img src="../assets/cris_mountain.jpg" alt="article img" />
+          <h4>Hiking</h4>
+        </article>
+      </article>
     </main>
-      </body>
+    <GeneralFooter />
+  </body>
 </template>
 
 <script scoped>
 import GeneralHeader from "@/components/GeneralHeader.vue";
+import GeneralFooter from "@/components/GeneralFooter.vue";
 export default {
   name: "AboutMeView",
   components: {
     GeneralHeader,
-      },
+    GeneralFooter,
+  },
 };
 </script>
 
@@ -53,62 +76,83 @@ export default {
 body {
   margin: 0;
   font-family: "Poppins";
+  color: #0e2431;
 }
 .grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 30px;
-}
-header {
-  margin-bottom: -3rem;
-}
-.column {
-  grid-column: span 3;
-  max-width: 100%;
-}
-.column img {
-  vertical-align: middle;
-  padding: 1rem;
-  width: 90%;
-}
-
-main {
-  margin: 60px auto;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 20px auto;
   padding: 20px;
 }
-main > h2 {
-  grid-column: span 12;
+.aboutme {
+  grid-column: 1 / span 4;
+  border-bottom: 1px solid #bbc7c7;
+  padding-bottom: 40px;
+}
+.aboutme p {
   text-align: center;
-  font-size: 1.5em;
 }
-main .aboutme {
-  grid-column: 8 / span 5;
-  margin-right: 2rem;
-  margin-top: -1rem;
+.featured {
+  grid-column: 1 / span 4;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: grid;
+  gap: 60px;
+  align-items: center;
 }
-main .aboutme p {
-  text-align: justify;
+.featured h2 {
+  grid-column: 1 / span 4;
+  margin: -3rem;
 }
-
-
-@media screen and (max-width: 960px) {
-  .column {
-    grid-column: 2 / span 10;
+.featured p {
+  grid-column: 1 / span 5;
+  margin: -1rem;
+}
+.featured img {
+  grid-column: span 1;
+  width: 100%;
+  margin-left: 2rem;
+}
+.featured h4 {
+  margin-left: 4rem;
+  margin-top: 0.4rem;
+}
+@media screen and (max-width: 980px) {
+  .aboutme {
     align-items: center;
-    /* I skip 1 and start at 2, we expand 10 columns so is 1 left also at the end */
-    margin-bottom: -1.8rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column: 1 / span 4;
+    display: block;
+    margin: 0 25px;
+    margin-top: -1rem;
   }
-  main .aboutme {
-    grid-column: 2 / span 10;
-    margin-top: -0.4rem;
-    margin-right: 0;
+  .featured {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column: 1 / span 4;
+    display: block;
   }
-  main .card {
-    grid-column: 3 / span 8;
+  .featured h2 {
+    grid-column: 1 / span 4;
+    margin: -1rem;
   }
-  main > h2 {
-    margin-top: -0.5rem;
-    margin-bottom: -0.2rem;
+  .featured p {
+    grid-column: 1 / span 5;
+    margin: 2rem;
+    text-align: justify;
   }
+  .aboutme p {
+    text-align: justify;
+  }
+  .featured img {
+  margin-top: 10px;
+  margin-left: 0rem;
+  max-width: 80%;
+}
+  .featured h4 {
+  margin-left: 0rem;
+}
 }
 </style>
