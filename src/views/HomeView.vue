@@ -5,6 +5,41 @@
       Hi all, it's me
       <span class="gradient" @click="addConfetti">Cristina Siles</span>!
     </h1>
+    <p>I'm a new frontend developer and I love it.</p>
+  </div>
+  <div class="language-container">
+    <h2>Skills</h2>
+    <div class="logos-grid">
+      <div class="skill-container">
+        <img class="logo-img" src="../assets/logos/python-logo.png" />
+        <p>Python</p>
+      </div>
+      <div class="skill-container">
+        <img class="logo-img" src="../assets/logos/css-3-logo.png" />
+        <p>CSS</p>
+      </div>
+      <div class="skill-container">
+        <img class="logo-img" src="../assets/logos/html-logo.png" />
+        <p>HTML</p>
+      </div>
+      <div class="skill-container">
+        <img class="logo-img" src="../assets/logos/javascript-logo-big.png" />
+        <p>JavaScript</p>
+      </div>
+      <div class="skill-container">
+        <img class="logo-img" src="../assets/logos/vue-logo.png" />
+        <p>Vue</p>
+      </div>
+      <div class="skill-container">
+        <img class="logo-complete" src="../assets/logos/github-logo.png" />
+      </div>
+      <div class="skill-container">
+        <img class="logo-complete" src="../assets/logos/nodejs-logo.png" />
+      </div>
+      <div class="skill-container">
+        <img class="logo-complete" src="../assets/logos/mongodb-logo.png" />
+      </div>
+    </div>
   </div>
   <GeneralFooter />
 </template>
@@ -30,25 +65,86 @@ export default {
 </script>
 
 <style scoped>
+.skill-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 1rem;
+}
+
 .home-container {
   display: flex;
   flex-direction: column;
-  min-height: 95vh;
+  min-height: 10rem;
 }
 h1,
 .gradient {
   margin-top: 6rem;
-  font-size: clamp(2rem, 4rem, 8rem);
+  font-size: clamp(2.2rem, 2.2rem, 2.2rem);
   font-family: "Poppins";
+  margin-bottom: 0rem;
 }
 
-h1 {
+h1,
+h2 {
   color: #0e2431;
 }
-
+p {
+  font-size: 1.2rem;
+}
 .gradient {
-  background-image: linear-gradient(92deg, #40e0d0 10%, #eee8aa 50%, #ff6347);
+  background: linear-gradient(270deg, #40e0d0, #eee8aa, #ff6347);
+  background-size: 600% 600%;
   -webkit-text-fill-color: #0000;
   -webkit-background-clip: text;
-  background-clip: text; /* Standard property for compatibility */}
+  animation: gradient-flow 6s ease infinite;
+}
+
+@keyframes gradient-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.language-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 10rem;
+  margin: 4rem 0rem;
+  align-items: center;
+}
+.logos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: start;
+  align-items: center;
+  margin: 2rem 1rem;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0px 0px 15px rgba(75, 74, 74, 0.1);
+}
+.logo-img {
+  width: 2rem;
+  margin: 0.5rem 0.5rem;
+}
+
+.logo-complete {
+  width: 6rem;
+  margin: 0.5rem 0.5rem;
+}
+
+@media screen and (max-width: 760px) {
+  .logos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .logo-img {
+    grid-column: span 1;
+  }
+}
 </style>
