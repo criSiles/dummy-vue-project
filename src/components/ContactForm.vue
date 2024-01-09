@@ -34,12 +34,8 @@
 </template>
 
 <script>
-import GeneralFooter from "@/components/GeneralFooter.vue";
 
 export default {
-  components: {
-    GeneralFooter,
-  },
   data() {
     return {
       email: "",

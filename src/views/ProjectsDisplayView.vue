@@ -85,9 +85,10 @@ main > h2 {
 .link:hover {
   color: royalblue;
 }
-.footer {
-  position: absolute;
-}
+
+  .footer{
+    position: absolute;
+  }
 @media screen and (max-width: 960px) {
   main > h2 {
     margin-top: 1.5rem;
@@ -101,7 +102,7 @@ main > h2 {
   .card {
     margin-bottom: 3rem;
   }
-  .footer {
+  .footer{
     position: relative;
   }
 }

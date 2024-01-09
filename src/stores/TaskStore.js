@@ -55,7 +55,7 @@ export const useTaskStore = defineStore("taskStore", {
           this.loading = false;
           return;
         } else {
-          data = deafultData.tasks;          
+          data = deafultData.tasks;
 
           //   console.log("Loading tasks from DB");
           //   const res = await fetch(urlDB);
@@ -82,9 +82,12 @@ export const useTaskStore = defineStore("taskStore", {
       if (taskExists) {
         console.log("The task already exists");
         return;
+      } else if (task.title.length === 0) {
+        console.log("You cannot add an empty To Do");
+        return;
+      } else {
+        this.tasks.push(task);
       }
-
-      this.tasks.push(task);
 
       // Update the local storage
       localStorage.setItem("tasks", JSON.stringify(this.tasks));

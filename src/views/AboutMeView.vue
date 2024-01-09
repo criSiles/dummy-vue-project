@@ -54,7 +54,9 @@
         </article>
       </article>
     </main>
-    <GeneralFooter />
+    <footer>
+      <GeneralFooter />
+    </footer>
   </body>
 </template>
 
@@ -91,7 +93,7 @@ body {
   padding-bottom: 40px;
 }
 .aboutme p {
-  text-align: center;
+  text-align:justify;
 }
 .featured {
   grid-column: 1 / span 4;
@@ -107,6 +109,7 @@ body {
 .featured p {
   grid-column: 1 / span 5;
   margin: -1rem;
+  text-align: justify;
 }
 .featured img {
   grid-column: span 1;
@@ -116,6 +119,10 @@ body {
 .featured h4 {
   margin-left: 4rem;
   margin-top: 0.4rem;
+}
+
+footer{
+position: relative;
 }
 @media screen and (max-width: 980px) {
   .aboutme {
@@ -154,5 +161,6 @@ body {
   .featured h4 {
   margin-left: 0rem;
 }
+
 }
 </style>

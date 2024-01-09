@@ -1,13 +1,17 @@
 <template>
   <div class="home-container">
     <GeneralHeader />
-    <h1>
-      Hi all, it's me
-      <span class="gradient" @click="addConfetti">Cristina Siles</span>!
-    </h1>
+    <div class="hi-container">
+      <h1>
+        Hi all, it's me
+      </h1>
+      <h1 class="name">
+        <span class="gradient" @click="addConfetti">Cristina Siles</span>!
+      </h1>
+    </div>
     <p>I'm a new frontend developer and I love it.</p>
   </div>
-  <div class="language-container">
+  <div class="skills">
     <h2>Skills</h2>
     <div class="logos-grid">
       <div class="skill-container">
@@ -39,9 +43,19 @@
       <div class="skill-container">
         <img class="logo-complete" src="../assets/logos/mongodb-logo.png" />
       </div>
+      <div class="skill-container">
+        <img class="logo-img" src="../assets/logos/typescript-logo.png" />
+        <p>TypeScript</p>
+      </div>
+      <div class="skill-container">
+        <img class="logo-img" src="../assets/logos/pinia-logo.png" />
+        <p>Pinia</p>
+      </div>
     </div>
   </div>
-  <GeneralFooter />
+  <footer>
+    <GeneralFooter />
+  </footer>
 </template>
 
 <script>
@@ -65,17 +79,27 @@ export default {
 </script>
 
 <style scoped>
-.skill-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding-right: 1rem;
+h1,
+h2 {
+  color: #0e2431;
+}
+p {
+  font-size: 1.2rem;
 }
 
-.home-container {
+.skills, p{
+  font-size: 1rem;
+}
+
+.hi-container{
+  flex-direction: row;
   display: flex;
-  flex-direction: column;
-  min-height: 10rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.name{
+  margin-left: 0.5rem;
 }
 h1,
 .gradient {
@@ -84,20 +108,13 @@ h1,
   font-family: "Poppins";
   margin-bottom: 0rem;
 }
-
-h1,
-h2 {
-  color: #0e2431;
-}
-p {
-  font-size: 1.2rem;
-}
 .gradient {
   background: linear-gradient(270deg, #40e0d0, #eee8aa, #ff6347);
   background-size: 600% 600%;
   -webkit-text-fill-color: #0000;
   -webkit-background-clip: text;
   animation: gradient-flow 6s ease infinite;
+  background-clip: none;
 }
 
 @keyframes gradient-flow {
@@ -112,22 +129,39 @@ p {
   }
 }
 
-.language-container {
+.home-container {
   display: flex;
   flex-direction: column;
   min-height: 10rem;
-  margin: 4rem 0rem;
-  align-items: center;
 }
-.logos-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  justify-items: start;
+.skill-container {
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  margin: 2rem 1rem;
+  padding-right: 1rem;
+}
+
+.skills h2 {
+  margin-top: 0.5rem;
+  margin-bottom: -0.5rem;
+}
+.skills {
   background-color: white;
   border-radius: 6px;
   box-shadow: 0px 0px 15px rgba(75, 74, 74, 0.1);
+  display: flex;
+  flex-direction: column;
+  min-height: 10rem;
+  margin: 4rem 20vw;
+  align-items: center;
+}
+
+.logos-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: start;
+  align-items: center;
+  margin: 0.5rem 1rem;
 }
 .logo-img {
   width: 2rem;
@@ -140,11 +174,26 @@ p {
 }
 
 @media screen and (max-width: 760px) {
+  h1, .gradient{
+    font-size: 2rem;
+  }
+  p{
+    font-size: 0.9rem;
+  }
   .logos-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .logo-img {
-    grid-column: span 1;
+  .skills {
+    margin: 4rem 3vh;
   }
+   .name{
+  margin-top:-0.5rem;
+ }
+ .hi-container{
+  display: inline;
+}
+footer{
+  position: relative;
+}
 }
 </style>

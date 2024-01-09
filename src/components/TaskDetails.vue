@@ -1,6 +1,6 @@
 <template>
   <div class="task">
-    <h3>{{ task.title }}</h3>
+    <h3 :class="{ completed: task.completed }" >{{ task.title }}</h3>
     <div class="icons">
       <i @click="taskStore.deleteTask(task.id)" class="material-icons">
         delete
@@ -39,4 +39,10 @@ export default {
   },
 };
 </script>
+
+<style>
+.completed{
+  text-decoration: line-through;
+}
+</style>
 

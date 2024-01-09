@@ -128,6 +128,7 @@ body {
     position: absolute;
     width: 2rem;
     z-index: 2;
+    margin-left: -0.5rem;
   }
 
   .nav-container .hamburger-lines {
@@ -138,6 +139,7 @@ body {
     position: absolute;
     width: 2rem;
     z-index: 1;
+    margin-left: -0.5rem;
   }
 
   .nav-container .hamburger-lines .line {

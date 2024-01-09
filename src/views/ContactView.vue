@@ -2,7 +2,7 @@
   <body>
     <GeneralHeader />
     <ContactForm />
-    <GeneralFooter />
+    <GeneralFooter class="footer"/>
   </body>
 </template>
 <script>
@@ -14,3 +14,9 @@ export default {
   components: { ContactForm, GeneralHeader, GeneralFooter },
 };
 </script>
+
+<style>
+.footer{
+  position: relative;
+}
+</style>
