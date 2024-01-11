@@ -13,7 +13,7 @@
       <div v-if="mobileError">{{ mobileError }}</div>
       
       <label> Role: </label>
-      <select>
+      <select v-model="role">
         <option value="developer">Web Developer</option>
         <option value="recruiter">Recruiter</option>
         <option value="student">Web Student</option>
@@ -40,6 +40,7 @@ export default {
     return {
       email: "",
       name: "",
+      mobile: "",
       role: "",
       terms: false,
       mobileError: "",
