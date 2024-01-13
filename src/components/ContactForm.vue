@@ -3,20 +3,22 @@
 
     <form @submit.prevent="handleSubmit">
       <label>Email:</label>
-      <input type="email" required v-model="email" />
+      <input type="email" required v-model.trim="email" placeholder="example@example.com" />
+      <div v-if="emailError">Please enter a valid email</div>
       
       <label>Name:</label>
-      <input type="name" required v-model="name" />
+      <input type="text" required v-model.trim="name" placeholder="John Doe" />
+      <div v-if="nameError">Please enter your name</div>
       
       <label>Mobile:</label>
-      <input type="mobile" required v-model="mobile" />
+      <input type="tel" required v-model.trim="mobile" placeholder="123456789" />
       <div v-if="mobileError">The mobile has to be 9 numbers</div>
-      
+            
       <label> Role: </label>
       <select required v-model="role">
-        <option type= "role" value="developer">Web Developer</option>
-        <option type= "role" value="recruiter">Recruiter</option>
-        <option type= "role" value="student">Web Student</option>
+        <option type="role" value="developer">Web Developer</option>
+        <option type="role" value="recruiter">Recruiter</option>
+        <option type="role" value="student">Web Student</option>
       </select>
 
       <div class="accept">
@@ -41,14 +43,24 @@ export default {
       email: "",
       name: "",
       mobile: "",
-      role: "",
-      terms: false,
+      role: "recruiter",
+      emailError: false,
+      nameError: false,
       mobileError: false,
+      roleError: false,
+      terms: false,
     };
   },
   methods: {
     handleSubmit() {
-      this.mobileError = (this.mobile.length < 9);
+      this.emailError = !this.email.includes('@');
+      this.nameError = this.name.trim() === '';
+      this.mobileError = this.mobile.trim().length !== 9;
+      this.roleError = this.role.trim() === '';
+
+      if (!this.emailError && !this.nameError && !this.mobileError && !this.roleError) {
+        // form submission logic
+      }
     },
   },
 };

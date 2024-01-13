@@ -1,8 +1,7 @@
-import { mount } from '@vue/test-utils'
-import ContactForm from '@/components/ContactForm.vue'
+import { mount } from "@vue/test-utils";
+import ContactForm from "@/components/ContactForm.vue";
 
-
-describe('ContactForm.vue', () => {
+describe("ContactForm.vue", () => {
   let wrapper;
 
   // BeforeEach is a setup function that allows us run a code before each test case in the test suite
@@ -20,7 +19,7 @@ describe('ContactForm.vue', () => {
     expect(wrapper.vm.email).toBe("");
     expect(wrapper.vm.name).toBe("");
     expect(wrapper.vm.mobile).toBe("");
-    expect(wrapper.vm.role).toBe("");
+    expect(wrapper.vm.role).toBe("recruiter");
     expect(wrapper.vm.terms).toBe(false);
   });
 
@@ -33,29 +32,29 @@ describe('ContactForm.vue', () => {
     expect(wrapper.vm.email).toBe("test@example.com");
 
     const name = "Cris";
-    await wrapper.find('input[type="name"]').setValue(name);
-    expect(wrapper.vm.name).toBe("Cris");
-
     const mobile = "1234567890";
-    await wrapper.find('input[type="mobile"]').setValue(mobile);
-    expect(wrapper.vm.mobile).toBe("1234567890");
-
     const role = "developer";
-    await wrapper.find('option[type="role"]').setValue(role);
-    expect(wrapper.vm.role).toBe("developer");
+    
+    await fillSubmitInputs(wrapper, email, name, role, mobile);
 
-    await wrapper.find('input[type="checkbox"]').setChecked();
+    expect(wrapper.vm.name).toBe("Cris");
+    expect(wrapper.vm.mobile).toBe("1234567890");
+    expect(wrapper.vm.role).toBe("developer");
     expect(wrapper.vm.terms).toBe(true);
   });
 
   // 1 FAIL: DOUBT, IDK how to do the submit correctly, I'm not sending it no anywhere
   it("form submission works correctly", async () => {
-    // Assuming there's a method 'submitForm' in your component
-    const submitForm = jest.spyOn(wrapper.vm, "submitForm");
+    // Create a spy on the 'submitForm' method
+    const submitForm = jest.spyOn(wrapper.vm, "handleSubmit");
 
-    await wrapper.find("button").trigger("click");
+    // Trigger the form submission
+    await wrapper.find("form").trigger("submit.prevent");
+
+    // Check if 'submitForm' has been called
     expect(submitForm).toHaveBeenCalled();
   });
+
   // 2 FAIL: The result is false ¿why?
   it("shows error message if mobile length is under 9", async () => {
     const number = "12345";
@@ -66,15 +65,16 @@ describe('ContactForm.vue', () => {
       "developer",
       number
     );
-    await wrapper.find("button").trigger("click");
+    await wrapper.find("form").trigger("submit.prevent");
+    await wrapper.vm.$nextTick(); // Wait for reactivity system
     expect(wrapper.vm.mobileError).toBe(true);
   });
-})
+});
 
-async function fillSubmitInputs (wrapper, email, name, role, mobile) {
+async function fillSubmitInputs(wrapper, email, name, role, mobile) {
   await wrapper.find('input[type="email"]').setValue(email);
-  await wrapper.find('input[type="name"]').setValue(name);
+  await wrapper.find('input[type="text"]').setValue(name);
   await wrapper.find('option[type="role"]').setValue(role);
-  await wrapper.find('input[type="mobile"]').setValue(mobile);
-  await wrapper.find('input[type="checkbox"]').setChecked()
+  await wrapper.find('input[type="tel"]').setValue(mobile);
+  await wrapper.find('input[type="checkbox"]').setChecked();
 }
