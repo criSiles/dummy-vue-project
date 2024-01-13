@@ -62,6 +62,50 @@ export default {
 };
 </script>
 <style scoped>
+
+.notes-section {
+  max-width: 37.5rem;
+  margin: 0 auto;
+}
+
+.notes-section h3 {
+  padding-top: 50px;
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+
+.notes-section p {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.custom-textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+.notes-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1em;
+  font-family: "Poppins";
+  border: 0;
+  border-radius: 6px;
+  background-color: orange;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.notes-button:hover {
+  background-color: #fff;
+  color: orange;
+}
+
 h3{
 margin-top: 2.2rem;
 }

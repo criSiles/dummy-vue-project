@@ -49,4 +49,28 @@ export default {
     color: #2c3e50;
     margin-top: 60px;
 }
+body {
+  background: #f2f2f2;
+  color: #444;
+  margin: 0;
+}
+body * {
+  font-family: "Poppins";
+}
+
+/* loading state */
+.loading {
+  max-width: 640px;
+  border: 1px solid #ffd859;
+  background: #ffe9a0;
+  color: #3a3a3a;
+  padding: 5px 0;
+  text-align: center;
+  margin: 30px auto;
+}
+.active {
+  background-color: orange;
+  color: white;
+  border: 2px solid orange;
+}
 </style>

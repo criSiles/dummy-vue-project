@@ -86,6 +86,9 @@ main > h2 {
   color: royalblue;
 }
 
+.link p{
+  font-weight: 600;
+}
   .footer{
     position: absolute;
   }

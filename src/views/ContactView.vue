@@ -19,4 +19,5 @@ export default {
 .footer{
   position: relative;
 }
+
 </style>

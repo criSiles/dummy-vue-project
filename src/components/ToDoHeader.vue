@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="title">
-      <img alt="Vue logo" src="../assets/orange.webp" />
+      <img alt="Orange logo" src="../assets/orange.webp" />
       <h1>Silly Tasks</h1>
     </div>
       <router-link :to="{ name: 'Home' }">

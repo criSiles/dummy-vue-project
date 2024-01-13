@@ -111,6 +111,7 @@ body {
 .nav-container .checkbox {
   display: none;
 }
+
 @media screen and (max-width: 768px) {
   .nav-container {
     display: block;

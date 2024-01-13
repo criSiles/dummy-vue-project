@@ -1,6 +1,5 @@
 <template>
   <form @submit.prevent="handleSubmit">
-    <!-- TODO: Cannot add a empty to do -->
     <input type="text" placeholder="Add a to do" v-model="newTask" />
     <button type="submit">Add</button>
   </form>
@@ -13,7 +12,6 @@ import { useTaskStore } from "@/stores/TaskStore";
 // Composition API
 export default {
   setup() {
-    // ref makes the variable reactive
     const newTask = ref("");
     const handleSubmit = () => {
       console.log("submit");

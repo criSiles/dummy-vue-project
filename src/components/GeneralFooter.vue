@@ -71,10 +71,4 @@ ul {
   list-style: none;
 }
 
-@media screen and (max-width: 960px) {
-footer {
-
-  position: relative;
-}
-}
 </style>

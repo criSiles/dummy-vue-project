@@ -10,18 +10,18 @@
       
       <label>Mobile:</label>
       <input type="mobile" required v-model="mobile" />
-      <div v-if="mobileError">{{ mobileError }}</div>
+      <div v-if="mobileError">The mobile has to be 9 numbers</div>
       
       <label> Role: </label>
-      <select v-model="role">
-        <option value="developer">Web Developer</option>
-        <option value="recruiter">Recruiter</option>
-        <option value="student">Web Student</option>
+      <select required v-model="role">
+        <option type= "role" value="developer">Web Developer</option>
+        <option type= "role" value="recruiter">Recruiter</option>
+        <option type= "role" value="student">Web Student</option>
       </select>
 
       <div class="accept">
         <div class="terms">
-          <input type="checkbox" v-model="terms" required />
+          <input type="checkbox" required v-model="terms"/>
           <label>Accept terms and conditions</label>
         </div>
         
@@ -43,13 +43,12 @@ export default {
       mobile: "",
       role: "",
       terms: false,
-      mobileError: "",
+      mobileError: false,
     };
   },
   methods: {
-    handleSubmit(e) {
-      this.mobileError =
-        this.mobile.length == 9 ? "" : "The mobile has to be 9 numbers";
+    handleSubmit() {
+      this.mobileError = (this.mobile.length < 9);
     },
   },
 };
@@ -117,6 +116,7 @@ input[type="checkbox"] {
   color: #ddd;
   border: 4px solid  #0e2431;
 }
+
 @media screen and (max-width: 768px) {
   .contact{
   display: flex;

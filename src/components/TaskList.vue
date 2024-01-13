@@ -149,8 +149,6 @@ export default {
 </script>
 
 <style>
-
-/* task list */
 .task-list {
   max-width: 40rem;
   margin: 1.25rem auto;
