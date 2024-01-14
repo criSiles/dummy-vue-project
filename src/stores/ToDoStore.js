@@ -11,10 +11,10 @@ import deafultData from "../../data/db.json";
  * @property {boolean} completed - Whether the task is completed.
  */
 
-export const useTaskStore = defineStore("taskStore", {
+export const useToDoStore = defineStore("todoStore", {
   state: () => ({
     tasks: [],
-    name: "Task Store",
+    name: "ToDo Store",
     loading: true,
   }),
   getters: {

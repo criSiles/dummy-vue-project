@@ -1,6 +1,6 @@
 <template>
   <div v-if="task">
-    <TaskNotes :task="task" />
+    <ToDoNotes :task="task" />
   </div>
   <div v-else>
     <p>Loading...</p>
@@ -8,28 +8,28 @@
 </template>
 
 <script>
-import TaskNotes from "@/components/TaskNotes.vue";
-import { useTaskStore } from "@/stores/TaskStore";
+import ToDoNotes from "@/components/ToDoNotes.vue";
+import { useToDoStore } from "../stores/ToDoStore";
 import { useRoute } from "vue-router";
 import { computed } from "vue";
 
 export default {
-  name: "TaskNotesView",
-  components: { TaskNotes },
+  name: "ToDoNotesView",
+  components: { ToDoNotes },
 
   setup() {
-    const taskStore = useTaskStore();
+       const todoStore = useToDoStore();
 
     // Get id from route params
     const route = useRoute();
     const id = parseInt(route.params.id);
 
-    taskStore.fetchTasks();
+    todoStore.fetchTasks();
 
     // Get task from store
     const task = computed(() => {
-      if (taskStore.loading === false) {
-        return taskStore.getTaskById(id);
+      if (todoStore.loading === false) {
+        return todoStore.getTaskById(id);
       } else {
         return null;
       }

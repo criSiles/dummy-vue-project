@@ -7,7 +7,7 @@
 
 <script>
 import { ref } from "vue";
-import { useTaskStore } from "@/stores/TaskStore";
+import { useToDoStore } from "../stores/ToDoStore";
 
 // Composition API
 export default {
@@ -17,14 +17,14 @@ export default {
       console.log("submit");
       console.log(newTask.value);
 
-      useTaskStore().addTask({
+      useToDoStore().addTask({
         id: Math.floor(Math.random() * 10000),
         title: newTask.value,
         completed: false,
       });
       newTask.value = "";
 
-      console.log(useTaskStore().tasks);
+      console.log(useToDoStore().tasks);
     };
     return {
       newTask,

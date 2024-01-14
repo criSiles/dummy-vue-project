@@ -3,19 +3,19 @@
         <ToDoHeader/>
         <!-- New task form-->
         <div class="new-task-form">
-            <TaskForm />
+            <ToDoForm />
         </div>
 
         <!-- Task list with details-->
-        <TaskList :tasks="tasks" :loading="loading" />
+        <ToDoList :tasks="tasks" :loading="loading" />
     </main>
 </template>
 
 <script>
 import ToDoHeader from "@/components/ToDoHeader.vue";
-import TaskList from "@/components/TaskList.vue";
-import TaskForm from "@/components/TaskForm.vue";
-import { useTaskStore } from "@/stores/TaskStore";
+import ToDoList from "@/components/ToDoList.vue";
+import ToDoForm from "@/components/ToDoForm.vue";
+import { useToDoStore } from "../stores/ToDoStore";
 import { storeToRefs } from 'pinia';
 
 export default {
@@ -24,17 +24,17 @@ export default {
         hideFooter: true,
     },
     components: {
-    TaskForm,
-    TaskList,
+    ToDoForm,
+    ToDoList,
     ToDoHeader
 },
     setup() {
-        const taskStore = useTaskStore();
-        const { tasks, loading } = storeToRefs(taskStore);
+        const todoStore = useToDoStore();
+        const { tasks, loading } = storeToRefs(todoStore);
 
-        taskStore.fetchTasks();
+        todoStore.fetchTasks();
 
-        return { taskStore, tasks, loading };
+        return { todoStore, tasks, loading };
     },
 };
 </script>

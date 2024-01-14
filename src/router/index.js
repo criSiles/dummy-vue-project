@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import TaskNotesView from "../views/TaskNotesView.vue"
+import ToDoNotesView from "../views/ToDoNotesView.vue";
 import ToDoView from "../views/ToDoView.vue"
 import HomeView from "../views/HomeView.vue"
 import ContactView from "../views/ContactView.vue"
@@ -41,8 +41,8 @@ const routes = [
   },
   {
     path: "/notes/:id",
-    name: "TaskNotesView",
-    component: TaskNotesView,
+    name: "ToDoNotesView",
+    component: ToDoNotesView,
     props: true,
   },
 ];

@@ -27,7 +27,7 @@
   <div class="task-list">
     <div v-if="!loading">
       <div v-for="task in paginatedTasks" :key="task.id">
-        <TaskDetails :task="task" />
+        <ToDoDetails :task="task" />
       </div>
     </div>
     <div v-else>
@@ -44,12 +44,12 @@
 
 <script>
 import PaginationItem from "./PaginationItem.vue";
-import TaskDetails from "./TaskDetails.vue";
+import ToDoDetails from "./ToDoDetails.vue";
 import { ref, computed } from "vue";
 
 export default {
   components: {
-    TaskDetails,
+    ToDoDetails,
     PaginationItem,
   },
   props: ["tasks", "loading"],

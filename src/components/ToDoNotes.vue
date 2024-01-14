@@ -20,7 +20,7 @@
 
 <script>
 import { ref, onMounted } from "vue";
-import { useTaskStore } from "@/stores/TaskStore";
+import { useToDoStore } from "../stores/ToDoStore";
 import ToDoHeader from "@/components/ToDoHeader.vue";
 
 export default {
@@ -37,7 +37,7 @@ export default {
     message.value = props.task.notes;
     console.log("This is the message value:", message.value);
     const saveInput = () => {
-      useTaskStore().addNotes(task.value.id, message.value);
+      useToDoStore().addNotes(task.value.id, message.value);
     };
     const textareaHeight = ref(10);
     const autoTextarea = ref(null);
