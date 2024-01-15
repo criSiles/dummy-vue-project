@@ -57,7 +57,7 @@ footer p {
 }
 
 .contact-social ul li a:hover {
-  color: royalblue;
+  color: #e25555;
 }
 .contact-social ul li a i {
   display: flex;

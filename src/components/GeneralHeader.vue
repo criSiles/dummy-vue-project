@@ -1,10 +1,16 @@
 <template>
   <body>
     <header class="header-container">
-      <div class="title">
-        <img class="element image" src="../assets/circleCris.png" alt="Cris" />
-        <h1 class="element name">Cristina Siles Vega</h1>
-      </div>
+      <router-link :to="{ name: 'Home' }">
+        <div class="title">
+          <img
+            class="element image"
+            src="../assets/circleCris.png"
+            alt="Cris"
+          />
+          <h1 class="element name">Cristina Siles Vega</h1>
+        </div>
+      </router-link>
       <nav>
         <div class="navbar">
           <div class="container nav-container">
@@ -44,6 +50,7 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0.5rem;
+  text-decoration: none;
 }
 
 .header-container {

@@ -83,7 +83,7 @@ main > h2 {
 }
 
 .link:hover {
-  color: royalblue;
+  color: #e25555;
 }
 
 .link p{
