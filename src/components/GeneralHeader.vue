@@ -8,7 +8,7 @@
             src="../assets/circleCris.png"
             alt="Cris"
           />
-          <h1 class="element name">Cristina Siles Vega</h1>
+          <a class="element name">Cristina Siles Vega</a>
         </div>
       </router-link>
       <nav>
@@ -50,7 +50,6 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0.5rem;
-  text-decoration: none;
 }
 
 .header-container {
@@ -79,6 +78,10 @@ body {
   font-weight: 500;
   justify-content: center;
   color: #0e2431;
+}
+
+a:link {
+  text-decoration: none;
 }
 
 .container {
@@ -214,7 +217,7 @@ body {
   .overlay {
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
     position: fixed;
     top: 0rem;
     left: 9.375rem;
