@@ -242,7 +242,7 @@ footer {
   position: relative;
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 780px) {
   h1,
   .gradient {
     font-size: 2rem;

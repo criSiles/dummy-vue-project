@@ -128,7 +128,7 @@ body {
     opacity: 0;
     position: absolute;
     width: 2rem;
-    z-index: 2;
+    z-index: 4;
     margin-left: -0.5rem;
   }
 
@@ -139,7 +139,7 @@ body {
     justify-content: space-around;
     position: absolute;
     width: 2rem;
-    z-index: 1;
+    z-index: 3;
     margin-left: -0.5rem;
   }
 
@@ -216,6 +216,7 @@ body {
     background-color: #f2f2f2;
     padding-right: 40px;
     padding-bottom: 40rem;
+    z-index: 2;
   }
 }
 </style>

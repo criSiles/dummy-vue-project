@@ -37,19 +37,19 @@
           to play board games, to see tv shows and to read.
         </p>
         <article>
-          <img src="../assets/cris_surf.jpg" alt="article img" />
+          <img src="../assets/about/cris_surf.jpg" alt="article img" />
           <h4>Surfing</h4>
         </article>
         <article>
-          <img src="../assets/cris_fest.jpg" alt="article img" />
+          <img src="../assets/about/cris_fest.jpg" alt="article img" />
           <h4>Live Music</h4>
         </article>
         <article>
-          <img src="../assets/cris_climber.jpg" alt="article img" />
+          <img src="../assets/about/cris_climber.jpg" alt="article img" />
           <h4>Indor Climbing</h4>
         </article>
         <article>
-          <img src="../assets/cris_mountain.jpg" alt="article img" />
+          <img src="../assets/about/cris_mountain.jpg" alt="article img" />
           <h4>Hiking</h4>
         </article>
       </article>
