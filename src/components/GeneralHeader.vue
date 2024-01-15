@@ -73,20 +73,38 @@ body {
   margin: 0.5rem 0.5rem;
 }
 
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
 .name {
   font-size: 1.1rem;
   font-weight: 500;
   justify-content: center;
   color: #0e2431;
+  animation: fadeIn 2s ease-in-out;
 }
 
 a:link {
   text-decoration: none;
 }
 
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .container {
   width: 90%;
   margin: auto;
+  animation: slideInFromLeft 2s ease-in-out;
 }
 .menu-items {
   height: 100vh;

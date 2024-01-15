@@ -79,6 +79,7 @@ body {
   margin: 0;
   font-family: "Poppins";
   color: #0e2431;
+  scroll-behavior: smooth;
 }
 .grid {
   display: grid;
