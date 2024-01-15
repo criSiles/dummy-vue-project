@@ -2,6 +2,7 @@ import { mount } from '@vue/test-utils'
 import ToDoForm from '@/components/ToDoForm.vue'
 import { useToDoStore } from '@/stores/ToDoStore'
 
+// Mocking the store: Jest will replace the actual implementation of ToDoStore with a mock version
 jest.mock('@/stores/ToDoStore')
 
 describe('ToDoForm.vue', () => {
@@ -10,11 +11,14 @@ describe('ToDoForm.vue', () => {
 
   beforeEach(() => {
     mockStore = {
+      // The store has a lot of data, getters and actions but, we only need for these test tasks and addTask
       tasks: [],
-      addTask: jest.fn()
-    }
-    useToDoStore.mockReturnValue(mockStore)
-    wrapper = mount(ToDoForm)
+      //  Creating a mock function for the addTask method
+      addTask: jest.fn(),
+    };
+    // Whenever useToDoStore is called in the tests, it will always return the value mockStore
+    useToDoStore.mockReturnValue(mockStore);
+    wrapper = mount(ToDoForm);
   })
 
   it('renders a form', () => {

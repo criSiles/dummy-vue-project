@@ -1,82 +1,81 @@
 <template>
-  <div class="home-container">
-    <GeneralHeader />
-    <div class="hi-container">
-      <h1>
-        Hi all, it's me
-      </h1>
-      <h1 class="name">
-        <span class="gradient" @click="addConfetti">Cristina Siles</span>!
-      </h1>
+  <body>
+    <div class="home-container">
+      <GeneralHeader />
+      <div class="hi-container">
+        <h1>Hi all, it's me</h1>
+        <h1 class="name">
+          <span class="gradient" @click="addConfetti">Cristina Siles</span>!
+        </h1>
+      </div>
+      <p>I'm a new frontend developer and I love it.</p>
     </div>
-    <p>I'm a new frontend developer and I love it.</p>
-  </div>
-  <div class="skills">
-    <h2>Skills</h2>
-    <div class="logos-grid">
-      <div class="skill-container">
-        <img class="logo-img" src="../assets/logos/python-logo.png" />
-        <p>Python</p>
+
+    <div class="skills">
+      <div class="coding-container">
+        <img src="../assets/logos/coding-skills-logo.svg" />
+        <p>Some of the languages, frameworks and tools I know are...</p>
       </div>
-      <div class="skill-container">
-        <img class="logo-img" src="../assets/logos/css-3-logo.png" />
-        <p>CSS</p>
-      </div>
-      <div class="skill-container">
-        <img class="logo-img" src="../assets/logos/html-logo.png" />
-        <p>HTML</p>
-      </div>
-      <div class="skill-container">
-        <img class="logo-img" src="../assets/logos/python.svg" />
-        <p>Sass</p>
-      </div>
-      <div class="skill-container">
-        <img class="logo-img" src="../assets/logos/vue-logo.svg" />
-        <p>Vue JS 3</p>
-      </div>
-      <div class="skill-container">
-        <img class="logo-img" src="../assets/logos/pinia-logo.svg" />
-        <p>Pinia</p>
-      </div>
-      <div class="skill-container">
-        <img class="logo-img" src="../assets/logos/javascript-logo-big.png" />
-        <p>JavaScript</p>
-      </div>
-      <div class="skill-container">
-        <img class="logo-img" src="../assets/logos/vue-logo.png" />
-        <p>Vue</p>
-      </div>
-      <div class="skill-container">
-        <img class="logo-complete" src="../assets/logos/github-logo.png" />
-      </div>
-      <div class="skill-container">
-        <img class="logo-complete" src="../assets/logos/nodejs-logo.png" />
-      </div>
-      <div class="skill-container">
-        <img class="logo-complete" src="../assets/logos/mongodb-logo.png" />
-      </div>
-      <div class="skill-container">
-        <img class="logo-img" src="../assets/logos/typescript-logo.png" />
-        <p>TypeScript</p>
-      </div>
-      <div class="skill-container">
-        <img class="logo-img" src="../assets/logos/pinia-logo.png" />
-        <p>Pinia</p>
+      <div class="logos-grid">
+        <div class="skill-container">
+          <img class="logo-img-svg" src="../assets/logos/python-logo.svg" />
+          <p>Python</p>
+        </div>
+        <div class="skill-container">
+          <img class="logo-img-svg" src="../assets/logos/html-5-logo.svg" />
+          <p>HTML</p>
+        </div>
+        <div class="skill-container">
+          <img class="logo-img-svg" src="../assets/logos/css-3-logo.svg" />
+          <p>CSS</p>
+        </div>
+        <div class="skill-container">
+          <img class="logo-img-svg" src="../assets/logos/javascript-logo.svg" />
+          <p>Javascript</p>
+        </div>
+        <div class="skill-container">
+          <img class="logo-img-svg" src="../assets/logos/typescript-logo.svg" />
+          <p>Typescript</p>
+        </div>
+        <div class="skill-container">
+          <img class="logo-img-svg" src="../assets/logos/vue-logo.svg" />
+          <p>Vue</p>
+        </div>
+        <div class="skill-container">
+          <img class="logo-img-svg" src="../assets/logos/pinia-logo.svg" />
+          <p>Pinia</p>
+        </div>
+        <div class="skill-container">
+          <img class="logo-img-svg" src="../assets/logos/tailwind-logo.svg" />
+          <p>Tailwind</p>
+        </div>
+        <div class="skill-container">
+          <img class="logo-img-svg" src="../assets/logos/git-logo.svg" />
+          <p>Git</p>
+        </div>
+        <div class="skill-container">
+          <img class="logo-img-svg" src="../assets/logos/github-logo.svg" />
+          <p>GitHub</p>
+        </div>
+        <div class="skill-container">
+          <img class="logo-img-svg" src="../assets/logos/firebase-logo.svg" />
+          <p>Firebase</p>
+        </div>
+        <div class="skill-container">
+          <img class="logo-img-svg" src="../assets/logos/mongodb-logo.svg" />
+          <p>MongoDB</p>
+        </div>
+        <div class="skill-container">
+          <img class="logo-img-svg" src="../assets/logos/nodejs-logo.svg" />
+          <p>Node.js</p>
+        </div>
+        <div class="skill-container">
+          <img class="logo-img-svg" src="../assets/logos/jest-logo.svg" />
+          <p>Jest</p>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="skills">
-    <h2>Skills 2</h2>
-    <div class="skill-container">
-      <img class="logo-img-svg" src="../assets/logos/python.svg" />
-    </div>
-    <div class="skill-container">
-      <img class="logo-img-svg" src="../assets/logos/vue-logo.svg" />
-    </div>
-    <div class="skill-container">
-      <img class="logo-img-svg" src="../assets/logos/pinia-logo.svg" />
-    </div>
-  </div>
+  </body>
   <footer>
     <GeneralFooter />
   </footer>
@@ -103,6 +102,9 @@ export default {
 </script>
 
 <style scoped>
+body {
+  background: linear-gradient(to bottom, #f5f5f5, white);
+}
 h1,
 h2 {
   color: #0e2431;
@@ -111,33 +113,20 @@ h2 {
 p {
   font-size: 1.2rem;
 }
-
-.skills,
-p {
-  font-size: 1rem;
-}
-
 .hi-container {
   flex-direction: row;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: -1rem;
 }
-
 .name {
   margin-left: 0.5rem;
 }
 
-h1,
+/* GRADIENT NAME CODE */
 .gradient {
-  margin-top: 6rem;
-  font-size: clamp(2.2rem, 2.2rem, 2.2rem);
-  font-family: "Poppins";
-  margin-bottom: 0rem;
-}
-
-.gradient {
-  background: linear-gradient(270deg, #40e0d0, #eee8aa, #ff6347);
+  background: linear-gradient(270deg, #ff6347, #eee8aa, #40e0d0);
   background-size: 600% 600%;
   -webkit-text-fill-color: #0000;
   -webkit-background-clip: text;
@@ -158,47 +147,65 @@ h1,
     background-position: 0% 50%;
   }
 }
+/* END GRADIENT */
+h1,
+.gradient {
+  margin-top: 6rem;
+  font-size: clamp(2.2rem, 2.2rem, 2.2rem);
+  font-family: "Poppins";
+  margin-bottom: 0rem;
+}
 
 .home-container {
   display: flex;
   flex-direction: column;
   min-height: 10rem;
 }
-
-.skill-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding-right: 1rem;
-}
-
-.skills h2 {
-  margin-top: 0.5rem;
-  margin-bottom: -0.5rem;
-}
-
 .skills {
-  background-color: white;
-  border-radius: 6px;
-  box-shadow: 0px 0px 15px rgba(75, 74, 74, 0.1);
+  /* border-top: 1px solid #bbc7c7; */
   display: flex;
   flex-direction: column;
-  min-height: 10rem;
+  min-height: 30rem;
+  margin-top: 10rem;
+  margin-bottom: auto;
   margin: 4rem 20vw;
   align-items: center;
 }
+.coding-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: -4rem;
+  margin-bottom: 1rem;
+}
 
+.coding-container > img {
+  position: relative;
+  width: 2rem;
+  margin: 0.5rem 0.5rem;
+}
+/* .coding-container > p {
+  font-weight: 500;
+} */
 .logos-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   justify-items: start;
   align-items: center;
   margin: 0.5rem 1rem;
 }
 
-.logo-img {
-  width: 2rem;
-  margin: 0.5rem 0.5rem;
+.skill-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 1rem auto;
+}
+.skill-container > p {
+  font-size: 1rem;
+  font-family: "Source Code Pro", monospace;
+  font-weight: 500;
+  margin-top: 0.2rem;
+  color: #0e2431;
 }
 
 .logo-img-svg {
@@ -207,13 +214,14 @@ h1,
   margin: 0.5rem 0.5rem;
 }
 
-.logo-img-svg::before,
+/* TRYING TO MAKE THE SHADOW */
+/* .logo-img-svg::before,
 .logo-img-svg::after {
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
-  box-shadow: 0px 0px 10px 2px rgba(185, 33, 33, 0.5); /* Increase the opacity */
+  box-shadow: 0px 0px 10px 2px rgba(185, 33, 33, 0.5); 
   z-index: -1;
 }
 
@@ -227,10 +235,14 @@ h1,
 .logo-complete {
   width: 6rem;
   margin: 0.5rem 0.5rem;
+} */
+
+footer {
+  margin-top: -2rem;
+  position: relative;
 }
 
 @media screen and (max-width: 760px) {
-
   h1,
   .gradient {
     font-size: 2rem;
@@ -245,7 +257,8 @@ h1,
   }
 
   .skills {
-    margin: 4rem 3vh;
+    padding-bottom: 4rem;
+    margin-bottom: 2rem;
   }
 
   .name {
@@ -254,9 +267,26 @@ h1,
 
   .hi-container {
     display: inline;
+    margin-top: 0rem;
   }
-
+  .home-container > p {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+  .coding-container {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .coding-container > p{
+    margin-left: -1.8rem;
+    margin-right: -1.8rem
+  }
   footer {
+    margin-top: -1rem;
     position: relative;
   }
-}</style>
+}
+</style>
