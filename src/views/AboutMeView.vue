@@ -79,6 +79,7 @@ body {
   margin: 0;
   font-family: "Poppins";
   color: #0e2431;
+  background: linear-gradient(to bottom, #f5f5f5, white);
 }
 .grid {
   display: grid;

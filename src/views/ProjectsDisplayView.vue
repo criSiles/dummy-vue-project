@@ -52,7 +52,7 @@ export default {
 body {
   margin: 0;
   font-family: "Poppins";
-  background: #f5f5f5;
+  background: linear-gradient(to bottom, #f5f5f5, white);
 }
 .container {
   display: flex;

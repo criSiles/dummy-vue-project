@@ -16,8 +16,10 @@ export default {
 </script>
 
 <style>
+body{
+    background: linear-gradient(to bottom, #f5f5f5, white);
+}
 .footer{
   position: relative;
 }
-
 </style>
