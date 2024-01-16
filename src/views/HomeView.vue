@@ -104,6 +104,7 @@ export default {
 <style scoped>
 body {
   background: linear-gradient(to bottom, #f5f5f5, white);
+  scroll-behavior: smooth;
 }
 h1,
 h2 {
@@ -113,6 +114,7 @@ h2 {
 p {
   font-size: 1.2rem;
 }
+
 .hi-container {
   flex-direction: row;
   display: flex;
@@ -120,6 +122,7 @@ p {
   align-items: center;
   margin-top: -1rem;
 }
+
 .name {
   margin-left: 0.5rem;
 }
@@ -147,6 +150,7 @@ p {
     background-position: 0% 50%;
   }
 }
+
 /* END GRADIENT */
 h1,
 .gradient {
@@ -161,6 +165,7 @@ h1,
   flex-direction: column;
   min-height: 10rem;
 }
+
 .skills {
   /* border-top: 1px solid #bbc7c7; */
   display: flex;
@@ -171,6 +176,7 @@ h1,
   margin: 4rem 20vw;
   align-items: center;
 }
+
 .coding-container {
   display: flex;
   flex-direction: row;
@@ -178,11 +184,12 @@ h1,
   margin-bottom: 1rem;
 }
 
-.coding-container > img {
+.coding-container>img {
   position: relative;
   width: 2rem;
   margin: 0.5rem 0.5rem;
 }
+
 /* .coding-container > p {
   font-weight: 500;
 } */
@@ -200,7 +207,8 @@ h1,
   align-items: center;
   margin: 1rem 1rem auto;
 }
-.skill-container > p {
+
+.skill-container>p {
   font-size: 1rem;
   font-family: "Source Code Pro", monospace;
   font-weight: 500;
@@ -243,6 +251,7 @@ footer {
 }
 
 @media screen and (max-width: 780px) {
+
   h1,
   .gradient {
     font-size: 2rem;
@@ -269,10 +278,12 @@ footer {
     display: inline;
     margin-top: 0rem;
   }
-  .home-container > p {
+
+  .home-container>p {
     margin-left: 3rem;
     margin-right: 3rem;
   }
+
   .coding-container {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
@@ -280,10 +291,12 @@ footer {
     flex-direction: column;
     align-items: center;
   }
-  .coding-container > p{
+
+  .coding-container>p {
     margin-left: -1.8rem;
     margin-right: -1.8rem
   }
+
   footer {
     margin-top: -1rem;
     position: relative;
