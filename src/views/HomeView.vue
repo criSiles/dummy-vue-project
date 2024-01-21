@@ -8,7 +8,9 @@
           <span class="gradient" @click="addConfetti">Cristina Siles</span>!
         </h1>
       </div>
-      <p>I'm a new frontend developer and I love it.</p>
+      <div>
+        <span v-for="(letter, index) in message" :key="index" :style="{ animationDelay: index * 0.1 + 's' }" class="letter">{{ letter }}</span>
+      </div>
     </div>
 
     <div class="skills">
@@ -92,6 +94,11 @@ export default {
     GeneralHeader,
     GeneralFooter,
   },
+  data() {
+    return {
+      message: "I'm a Frontend Developer",
+    };
+  },
   methods: {
     addConfetti() {
       const jsConfetti = new JSConfetti();
@@ -102,10 +109,23 @@ export default {
 </script>
 
 <style scoped>
+
+.letter {
+  color: rgba(255, 255, 255, 0);
+  animation: color 4s forwards;
+}
+
+@keyframes color {
+  to {
+    color: rgb(0, 0, 0);
+  }
+}
+
 body {
   background: linear-gradient(to bottom, #f5f5f5, white);
   scroll-behavior: smooth;
 }
+
 h1,
 h2 {
   color: #0e2431;
@@ -246,8 +266,10 @@ h1,
 } */
 
 footer {
-  margin-top: -2rem;
-  position: relative;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 10rem;
 }
 
 @media screen and (max-width: 780px) {
