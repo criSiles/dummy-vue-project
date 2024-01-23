@@ -1,12 +1,12 @@
 <template>
   <div class="all-container">
-    <header>
+    <header role="banner">
       <GeneralHeader />
     </header>
-    <main>
+    <main role="main">
       <ContactForm />
     </main>
-    <footer>
+    <footer role="contentinfo">
       <GeneralFooter/>
     </footer>
   </div>
@@ -32,9 +32,4 @@ export default {
   background: linear-gradient(to bottom, #f2f2f2, white);
 }
 
-/* PATCH: TODO FIX THE FOOTER */
-/* footer{
-  position: relative;
-  margin-bottom: -1.4rem;
-} */
 </style>

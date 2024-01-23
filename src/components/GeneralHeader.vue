@@ -8,7 +8,9 @@
             src="../assets/circleCris.png"
             alt="Cris"
           />
-          <a class="element name">Cristina Siles Vega</a>
+            <a class="element name">Cristina Siles Vega</a>
+  
+            
         </div>
       </router-link>
       <nav>

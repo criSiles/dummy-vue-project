@@ -1,11 +1,11 @@
 <template>
-  <div class="all-container">
+  <section class="all-container">
     <header>
       <GeneralHeader />
     </header>
 
     <main>
-      <div class="home-container">
+      <section class="home-container">
         <div class="hi-container">
           <h1>Hi all, it's me</h1>
           <h1 class="name">
@@ -13,84 +13,28 @@
           </h1>
         </div>
         <p>I'm a new frontend developer and I love it.</p>
-      </div>
+      </section>
 
-      <div class="skills">
+      <section class="skills">
         <div class="coding-container">
-          <img src="../assets/logos/coding-skills-logo.svg" />
+          <img src="../assets/logos/coding-skills-logo.svg" alt="Coding skills logo" />
           <p>Some of the languages, frameworks and tools I know are...</p>
         </div>
-        <div class="logos-grid">
-          <div class="skill-container">
-            <img class="logo-img-svg" src="../assets/logos/python-logo.svg" />
-            <p>Python</p>
-          </div>
-          <div class="skill-container">
-            <img class="logo-img-svg" src="../assets/logos/html-5-logo.svg" />
-            <p>HTML</p>
-          </div>
-          <div class="skill-container">
-            <img class="logo-img-svg" src="../assets/logos/css-3-logo.svg" />
-            <p>CSS</p>
-          </div>
-          <div class="skill-container">
-            <img
-              class="logo-img-svg"
-              src="../assets/logos/javascript-logo.svg"
-            />
-            <p>Javascript</p>
-          </div>
-          <div class="skill-container">
-            <img
-              class="logo-img-svg"
-              src="../assets/logos/typescript-logo.svg"
-            />
-            <p>Typescript</p>
-          </div>
-          <div class="skill-container">
-            <img class="logo-img-svg" src="../assets/logos/vue-logo.svg" />
-            <p>Vue</p>
-          </div>
-          <div class="skill-container">
-            <img class="logo-img-svg" src="../assets/logos/pinia-logo.svg" />
-            <p>Pinia</p>
-          </div>
-          <div class="skill-container">
-            <img class="logo-img-svg" src="../assets/logos/tailwind-logo.svg" />
-            <p>Tailwind</p>
-          </div>
-          <div class="skill-container">
-            <img class="logo-img-svg" src="../assets/logos/git-logo.svg" />
-            <p>Git</p>
-          </div>
-          <div class="skill-container">
-            <img class="logo-img-svg" src="../assets/logos/github-logo.svg" />
-            <p>GitHub</p>
-          </div>
-          <div class="skill-container">
-            <img class="logo-img-svg" src="../assets/logos/firebase-logo.svg" />
-            <p>Firebase</p>
-          </div>
-          <div class="skill-container">
-            <img class="logo-img-svg" src="../assets/logos/mongodb-logo.svg" />
-            <p>MongoDB</p>
-          </div>
-          <div class="skill-container">
-            <img class="logo-img-svg" src="../assets/logos/nodejs-logo.svg" />
-            <p>Node.js</p>
-          </div>
-          <div class="skill-container">
-            <img class="logo-img-svg" src="../assets/logos/jest-logo.svg" />
-            <p>Jest</p>
-          </div>
-        </div>
-      </div>
+        <section class="logos-grid">
+          <figure class="skill-container logo-hover" v-for="skill in skills" :key="skill.name">
+            <img class="logo-img-svg" :src="skill.logo" :style="{ filter: dropShadow(skill.color) }" alt="Logo of {{skill.name}}" />
+            <figcaption>
+              <h3>{{ skill.name }}</h3>
+            </figcaption>
+          </figure>
+        </section>
+      </section>
     </main>
 
     <footer>
       <GeneralFooter />
     </footer>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -104,23 +48,49 @@ export default {
     GeneralHeader,
     GeneralFooter,
   },
+  data() {
+    return {
+      skills: [
+        { name: 'Python', logo: require('../assets/logos/python-logo.svg'), color: 'rgba(56,118,167, 0.3)'},
+        { name: 'HTML', logo: require('../assets/logos/html-5-logo.svg'), color: 'rgba(228,76,36, 0.3)'},
+        { name: 'CSS', logo: require('../assets/logos/css-3-logo.svg'), color: 'rgba(36,76,228, 0.3)'},
+        { name: 'Javascript', logo: require('../assets/logos/javascript-logo.svg'), color: 'rgba(240,219,79, 0.3)'},
+        { name: 'Typescript', logo: require('../assets/logos/typescript-logo.svg'), color: 'rgba(56,118,167, 0.3)'},
+        { name: 'Vue', logo: require('../assets/logos/vue-logo.svg'), color: 'rgba(62,177,136, 0.3)'},
+        { name: 'Pinia', logo: require('../assets/logos/pinia-logo.svg'), color: 'rgba(62,177,136, 0.3)'},
+        { name: 'Tailwind', logo: require('../assets/logos/tailwind-logo.svg'), color: 'rgba(54,192,196, 0.3)'},
+        { name: 'Git', logo: require('../assets/logos/git-logo.svg'), color: 'rgba(244,100,84, 0.3)'},
+        { name: 'GitHub', logo: require('../assets/logos/github-logo.svg'), color: 'rgba(0, 0, 0, 0.3)'},
+        { name: 'Firebase', logo: require('../assets/logos/firebase-logo.svg'), color: 'rgba(251,203,60, 0.3)'},
+        { name: 'MongoDB', logo: require('../assets/logos/mongodb-logo.svg'), color: 'rgba(71,166,77, 0.3)'},
+        { name: 'Node.js', logo: require('../assets/logos/nodejs-logo.svg'), color: 'rgba(136,201,76, 0.3)'},
+        { name: 'Firebase', logo: require('../assets/logos/jest-logo.svg'), color: 'rgba(156,68,92, 0.3)'},
+      ],
+    };
+  },
+
   methods: {
     addConfetti() {
       const jsConfetti = new JSConfetti();
       jsConfetti.addConfetti();
     },
   },
+
+  computed: {
+  dropShadow() {
+    return (color) => `drop-shadow(0 5px 2px ${color})`;
+  },
+},
 };
 </script>
 
 <style scoped>
-
 .all-container {
   /* display: grid;
   grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
   margin: 0;
   font-family: "Poppins"; */
+  min-height: 100svh;
   background: linear-gradient(to bottom, #f2f2f2, white);
 }
 h1,
@@ -197,7 +167,7 @@ h1,
 .coding-container {
   display: flex;
   flex-direction: row;
-  margin-top: -4rem;
+  margin-top: -1rem;
   margin-bottom: 1rem;
 }
 
@@ -214,59 +184,34 @@ h1,
   align-items: center;
   margin: 0.5rem 1rem;
 }
+.logo-hover {
+  transition: transform 0.3s ease-in-out;
+}
 
+.logo-hover:hover {
+  transform: scale(1.2);
+}
 .skill-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 1rem 1rem auto;
 }
-
-.skill-container > p {
-  font-size: 1rem;
-  font-family: "Source Code Pro", monospace;
-  font-weight: 500;
-  margin-top: 0.2rem;
-  color: #0e2431;
-}
-
 .logo-img-svg {
   position: relative;
   width: 5rem;
   margin: 0.5rem 0.5rem;
 }
 
-/* TRYING TO MAKE THE SHADOW */
-/* .logo-img-svg::before,
-.logo-img-svg::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  box-shadow: 0px 0px 10px 2px rgba(185, 33, 33, 0.5); 
-  z-index: -1;
+figcaption > h3 {
+  font-family: "Source Code Pro", monospace;
+  margin-top: 0.2rem;
+  color: #0e2431;
+  font-size: 1rem;
 }
 
-.logo-img-svg::before {
-  transform: rotate(60deg);
-}
-
-.logo-img-svg::after {
-  transform: rotate(-60deg);
-}
-.logo-complete {
-  width: 6rem;
-  margin: 0.5rem 0.5rem;
-} */
-
-/* PATCH: TODO FIX THE FOOTER */
-/* footer {
-  margin-top: -2rem;
-  position: relative;
-} */
-
-footer{
-  padding-bottom: 0.1rem;
+footer {
+  padding-bottom: 0.2rem;
 }
 
 @media screen and (max-width: 780px) {
@@ -314,11 +259,5 @@ footer{
     margin-left: -1.8rem;
     margin-right: -1.8rem;
   }
-
-  /* PATCH: TODO FIX THE FOOTER */
-  /* footer {
-    margin-top: -1rem;
-    position: relative;
-  } */
 }
 </style>

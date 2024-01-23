@@ -1,5 +1,6 @@
 <template>
-  <div class="all-container">
+  <!-- role="contentinfo" attribute is an ARIA role that indicates the section contains information about the parent document. -->
+  <section class="all-container" role="contentinfo">
   <header>
     <GeneralHeader />
   </header>
@@ -60,7 +61,7 @@
     <footer>
       <GeneralFooter />
     </footer>
-  </div>
+  </section>
   </template>
 
 <script scoped>
@@ -130,10 +131,6 @@ export default {
   margin-top: 0.4rem;
 }
 
-/* PATCH: TODO FIX THE FOOTER */
-/* footer {
-  position: relative;
-} */
 
 @media screen and (max-width: 980px) {
   .aboutme {
