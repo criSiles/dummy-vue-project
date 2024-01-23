@@ -1,84 +1,96 @@
 <template>
-  <body>
-    <div class="home-container">
+  <!-- <div class="all-container"> -->
+    <header>
       <GeneralHeader />
-      <div class="hi-container">
-        <h1>Hi all, it's me</h1>
-        <h1 class="name">
-          <span class="gradient" @click="addConfetti">Cristina Siles</span>!
-        </h1>
-      </div>
-      <p>I'm a new frontend developer and I love it.</p>
-    </div>
+    </header>
 
-    <div class="skills">
-      <div class="coding-container">
-        <img src="../assets/logos/coding-skills-logo.svg" />
-        <p>Some of the languages, frameworks and tools I know are...</p>
+    <main>
+      <div class="home-container">
+        <div class="hi-container">
+          <h1>Hi all, it's me</h1>
+          <h1 class="name">
+            <span class="gradient" @click="addConfetti">Cristina Siles</span>!
+          </h1>
+        </div>
+        <p>I'm a new frontend developer and I love it.</p>
       </div>
-      <div class="logos-grid">
-        <div class="skill-container">
-          <img class="logo-img-svg" src="../assets/logos/python-logo.svg" />
-          <p>Python</p>
+
+      <div class="skills">
+        <div class="coding-container">
+          <img src="../assets/logos/coding-skills-logo.svg" />
+          <p>Some of the languages, frameworks and tools I know are...</p>
         </div>
-        <div class="skill-container">
-          <img class="logo-img-svg" src="../assets/logos/html-5-logo.svg" />
-          <p>HTML</p>
-        </div>
-        <div class="skill-container">
-          <img class="logo-img-svg" src="../assets/logos/css-3-logo.svg" />
-          <p>CSS</p>
-        </div>
-        <div class="skill-container">
-          <img class="logo-img-svg" src="../assets/logos/javascript-logo.svg" />
-          <p>Javascript</p>
-        </div>
-        <div class="skill-container">
-          <img class="logo-img-svg" src="../assets/logos/typescript-logo.svg" />
-          <p>Typescript</p>
-        </div>
-        <div class="skill-container">
-          <img class="logo-img-svg" src="../assets/logos/vue-logo.svg" />
-          <p>Vue</p>
-        </div>
-        <div class="skill-container">
-          <img class="logo-img-svg" src="../assets/logos/pinia-logo.svg" />
-          <p>Pinia</p>
-        </div>
-        <div class="skill-container">
-          <img class="logo-img-svg" src="../assets/logos/tailwind-logo.svg" />
-          <p>Tailwind</p>
-        </div>
-        <div class="skill-container">
-          <img class="logo-img-svg" src="../assets/logos/git-logo.svg" />
-          <p>Git</p>
-        </div>
-        <div class="skill-container">
-          <img class="logo-img-svg" src="../assets/logos/github-logo.svg" />
-          <p>GitHub</p>
-        </div>
-        <div class="skill-container">
-          <img class="logo-img-svg" src="../assets/logos/firebase-logo.svg" />
-          <p>Firebase</p>
-        </div>
-        <div class="skill-container">
-          <img class="logo-img-svg" src="../assets/logos/mongodb-logo.svg" />
-          <p>MongoDB</p>
-        </div>
-        <div class="skill-container">
-          <img class="logo-img-svg" src="../assets/logos/nodejs-logo.svg" />
-          <p>Node.js</p>
-        </div>
-        <div class="skill-container">
-          <img class="logo-img-svg" src="../assets/logos/jest-logo.svg" />
-          <p>Jest</p>
+        <div class="logos-grid">
+          <div class="skill-container">
+            <img class="logo-img-svg" src="../assets/logos/python-logo.svg" />
+            <p>Python</p>
+          </div>
+          <div class="skill-container">
+            <img class="logo-img-svg" src="../assets/logos/html-5-logo.svg" />
+            <p>HTML</p>
+          </div>
+          <div class="skill-container">
+            <img class="logo-img-svg" src="../assets/logos/css-3-logo.svg" />
+            <p>CSS</p>
+          </div>
+          <div class="skill-container">
+            <img
+              class="logo-img-svg"
+              src="../assets/logos/javascript-logo.svg"
+            />
+            <p>Javascript</p>
+          </div>
+          <div class="skill-container">
+            <img
+              class="logo-img-svg"
+              src="../assets/logos/typescript-logo.svg"
+            />
+            <p>Typescript</p>
+          </div>
+          <div class="skill-container">
+            <img class="logo-img-svg" src="../assets/logos/vue-logo.svg" />
+            <p>Vue</p>
+          </div>
+          <div class="skill-container">
+            <img class="logo-img-svg" src="../assets/logos/pinia-logo.svg" />
+            <p>Pinia</p>
+          </div>
+          <div class="skill-container">
+            <img class="logo-img-svg" src="../assets/logos/tailwind-logo.svg" />
+            <p>Tailwind</p>
+          </div>
+          <div class="skill-container">
+            <img class="logo-img-svg" src="../assets/logos/git-logo.svg" />
+            <p>Git</p>
+          </div>
+          <div class="skill-container">
+            <img class="logo-img-svg" src="../assets/logos/github-logo.svg" />
+            <p>GitHub</p>
+          </div>
+          <div class="skill-container">
+            <img class="logo-img-svg" src="../assets/logos/firebase-logo.svg" />
+            <p>Firebase</p>
+          </div>
+          <div class="skill-container">
+            <img class="logo-img-svg" src="../assets/logos/mongodb-logo.svg" />
+            <p>MongoDB</p>
+          </div>
+          <div class="skill-container">
+            <img class="logo-img-svg" src="../assets/logos/nodejs-logo.svg" />
+            <p>Node.js</p>
+          </div>
+          <div class="skill-container">
+            <img class="logo-img-svg" src="../assets/logos/jest-logo.svg" />
+            <p>Jest</p>
+          </div>
         </div>
       </div>
-    </div>
-  </body>
-  <footer>
-    <GeneralFooter />
-  </footer>
+    </main>
+
+    <footer>
+      <GeneralFooter />
+    </footer>
+  <!-- </div> -->
 </template>
 
 <script>
@@ -102,9 +114,14 @@ export default {
 </script>
 
 <style scoped>
-body {
-  background: linear-gradient(to bottom, #f5f5f5, white);
-  scroll-behavior: smooth;
+
+.all-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Poppins";
+  background: linear-gradient(to bottom, #f2f2f2, white);
 }
 h1,
 h2 {
@@ -113,6 +130,7 @@ h2 {
 
 p {
   font-size: 1.2rem;
+  font-weight: 500;
 }
 
 .hi-container {
@@ -167,7 +185,6 @@ h1,
 }
 
 .skills {
-  /* border-top: 1px solid #bbc7c7; */
   display: flex;
   flex-direction: column;
   min-height: 30rem;
@@ -184,15 +201,12 @@ h1,
   margin-bottom: 1rem;
 }
 
-.coding-container>img {
+.coding-container > img {
   position: relative;
   width: 2rem;
   margin: 0.5rem 0.5rem;
 }
 
-/* .coding-container > p {
-  font-weight: 500;
-} */
 .logos-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -208,7 +222,7 @@ h1,
   margin: 1rem 1rem auto;
 }
 
-.skill-container>p {
+.skill-container > p {
   font-size: 1rem;
   font-family: "Source Code Pro", monospace;
   font-weight: 500;
@@ -245,13 +259,13 @@ h1,
   margin: 0.5rem 0.5rem;
 } */
 
-footer {
+/* PATCH: TODO FIX THE FOOTER */
+/* footer {
   margin-top: -2rem;
   position: relative;
-}
+} */
 
 @media screen and (max-width: 780px) {
-
   h1,
   .gradient {
     font-size: 2rem;
@@ -279,7 +293,7 @@ footer {
     margin-top: 0rem;
   }
 
-  .home-container>p {
+  .home-container > p {
     margin-left: 3rem;
     margin-right: 3rem;
   }
@@ -292,14 +306,15 @@ footer {
     align-items: center;
   }
 
-  .coding-container>p {
+  .coding-container > p {
     margin-left: -1.8rem;
-    margin-right: -1.8rem
+    margin-right: -1.8rem;
   }
 
-  footer {
+  /* PATCH: TODO FIX THE FOOTER */
+  /* footer {
     margin-top: -1rem;
     position: relative;
-  }
+  } */
 }
 </style>

@@ -1,41 +1,47 @@
 <template>
-  <header>
-    <GeneralHeader />
-  </header>
-  <h2>Projects</h2>
-  <main class="container">
-    <div class="card">
-      <h3>To Do</h3>
-      <p>
-        This is a website where you can find a To Do list. In this part you
-        could add a new to do, mark it as fav, delete it and add notes.
-      </p>
-      <router-link class="link" :to="{ name: 'ToDo' }"
-        ><p>Click here to go to the web</p>
-      </router-link>
-    </div>
-    <div class="card">
-      <h3>Second Hand Shop</h3>
-      <p>
-        This is a second hand shop website. You can see all the products, make a
-        search for a specific product and post a product to sell.
-      </p>
-      <router-link class="link" :to="{ name: 'ProjectsWip' }"
-        ><p>Click here to go to the web</p>
-      </router-link>
-    </div>
-    <div class="card">
-      <h3>Flitter</h3>
-      <p>
-        This is a social media website where you can express yourself and see
-        what other people are thinking or doing.
-      </p>
-      <router-link class="link" :to="{ name: 'ProjectsWip' }"
-        ><p>Click here to go to the web</p>
-      </router-link>
-    </div>
-    <GeneralFooter class="footer" />
-  </main>
+  <div class="all-container">
+    <header>
+      <GeneralHeader />
+    </header>
+    <main>
+      <h2>Projects</h2>
+      <div class="card-container">
+        <div class="card">
+          <h3>To Do</h3>
+          <p>
+            This is a website where you can find a To Do list. In this part you
+            could add a new to do, mark it as fav, delete it and add notes.
+          </p>
+          <router-link class="link" :to="{ name: 'ToDo' }"
+            ><p>Click here to go to the web</p>
+          </router-link>
+        </div>
+        <div class="card">
+          <h3>Second Hand Shop</h3>
+          <p>
+            This is a second hand shop website. You can see all the products,
+            make a search for a specific product and post a product to sell.
+          </p>
+          <router-link class="link" :to="{ name: 'ProjectsWip' }"
+            ><p>Click here to go to the web</p>
+          </router-link>
+        </div>
+        <div class="card">
+          <h3>Flitter</h3>
+          <p>
+            This is a social media website where you can express yourself and
+            see what other people are thinking or doing.
+          </p>
+          <router-link class="link" :to="{ name: 'ProjectsWip' }"
+            ><p>Click here to go to the web</p>
+          </router-link>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <GeneralFooter />
+    </footer>
+  </div>
 </template>
 <script>
 import GeneralHeader from "@/components/GeneralHeader.vue";
@@ -49,19 +55,24 @@ export default {
 };
 </script>
 <style scoped>
-body {
+.all-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
   margin: 0;
   font-family: "Poppins";
-  background: linear-gradient(to bottom, #f5f5f5, white);
+  background: linear-gradient(to bottom, #f2f2f2, white);
 }
-.container {
+
+.card-container {
   display: flex;
 }
 
 main > h2 {
   text-align: center;
   font-size: 1.5em;
-  margin-top: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
 }
 .card {
   grid-column: span 4;
@@ -86,27 +97,22 @@ main > h2 {
   color: #e25555;
 }
 
-.link p{
+.link p {
   font-weight: 600;
 }
-  .footer{
-    position: absolute;
-  }
+
 @media screen and (max-width: 960px) {
-  main > h2 {
+  /* main > h2 {
     margin-top: 1.5rem;
     margin-bottom: -0.2rem;
-  }
-  .container {
+  } */
+  .card-container {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
   }
   .card {
     margin-bottom: 3rem;
-  }
-  .footer{
-    position: relative;
   }
 }
 </style>

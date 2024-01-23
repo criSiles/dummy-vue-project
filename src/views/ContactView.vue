@@ -1,11 +1,17 @@
 <template>
-  <body>
-    <GeneralHeader />
-    <ContactForm />
-    <GeneralFooter class="footer"/>
-  </body>
+  <div class="all-container">
+    <header>
+      <GeneralHeader />
+    </header>
+    <main>
+      <ContactForm />
+    </main>
+    <footer>
+      <GeneralFooter/>
+    </footer>
+  </div>
 </template>
-<script>
+<script scoped>
 import ContactForm from "@/components/ContactForm.vue";
 import GeneralHeader from "@/components/GeneralHeader.vue";
 import GeneralFooter from "@/components/GeneralFooter.vue";
@@ -15,11 +21,20 @@ export default {
 };
 </script>
 
-<style>
-body{
-    background: linear-gradient(to bottom, #f5f5f5, white);
+<style scoped>
+
+.all-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Poppins";
+  background: linear-gradient(to bottom, #f2f2f2, white);
 }
-.footer{
+
+/* PATCH: TODO FIX THE FOOTER */
+/* footer{
   position: relative;
-}
+  margin-bottom: -1.4rem;
+} */
 </style>

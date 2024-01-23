@@ -25,8 +25,9 @@ html,
 body {
   height: 100%;
   margin: 0;
+  padding: 0;
 }
-footer {
+/* footer {
   background-color: #fff;
   position: absolute;
   bottom: 0;
@@ -35,8 +36,7 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-bottom: -2rem;
-}
+} */
 footer p {
   color: #0e2431;
   font-size: 1rem;
@@ -49,7 +49,6 @@ footer p {
   color: #0e2431;
   display: inline-block;
   height: 2rem;
-  margin: 0rem 0.2rem;
   padding-top: 1rem;
   transition: all 0.4s ease 0s;
   width: 40px;

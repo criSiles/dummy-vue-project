@@ -76,7 +76,7 @@ form {
   max-width: 40rem;
   margin: 1.8rem auto;
   margin-top: 5rem;
-  background: white;
+  background: #e7e7e7;
   text-align: left;
   padding: 2rem;
   gap: 1rem;
@@ -98,7 +98,7 @@ select {
   box-sizing: border-box;
   border: 0;
   border-radius: 0.375rem;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #e7e7e7;
   color:  #0e2431;
   font-size: 1em;
 }
@@ -118,15 +118,15 @@ input[type="checkbox"] {
   font-family: "Poppins";
   margin-top: 1.2rem;
   border-radius: 0.375rem;
-  border: 4px solid #ddd;
+  border: 4px solid white;
   font-size: 0.9rem;
-  background-color:#ddd;
+  background-color:white;
   color: #0e2431;
 }
 
 .submit button:hover {
   background-color:  #0e2431;
-  color: #ddd;
+  color: #e7e7e7;
   border: 4px solid  #0e2431;
 }
 
