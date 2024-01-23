@@ -108,6 +108,7 @@ input[type="checkbox"] {
   width: 16px;
   margin: 0 10px 0 0;
   position: relative;
+  background: white;
   top: 2px;
 }
 .accept{

@@ -62,6 +62,7 @@ export default {
   margin: 0;
   font-family: "Poppins";
   background: linear-gradient(to bottom, #f2f2f2, white);
+  padding-bottom: 3rem;
 }
 
 .card-container {
@@ -101,6 +102,9 @@ main > h2 {
   font-weight: 600;
 }
 
+footer{
+  margin-bottom: -1.5rem;
+}
 @media screen and (max-width: 960px) {
   /* main > h2 {
     margin-top: 1.5rem;

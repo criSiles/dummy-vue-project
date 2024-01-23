@@ -1,5 +1,5 @@
 <template>
-  <!-- <div class="all-container"> -->
+  <div class="all-container">
     <header>
       <GeneralHeader />
     </header>
@@ -90,7 +90,7 @@
     <footer>
       <GeneralFooter />
     </footer>
-  <!-- </div> -->
+  </div>
 </template>
 
 <script>
@@ -116,11 +116,11 @@ export default {
 <style scoped>
 
 .all-container {
-  display: grid;
+  /* display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
   margin: 0;
-  font-family: "Poppins";
+  font-family: "Poppins"; */
   background: linear-gradient(to bottom, #f2f2f2, white);
 }
 h1,
@@ -264,6 +264,10 @@ h1,
   margin-top: -2rem;
   position: relative;
 } */
+
+footer{
+  padding-bottom: 0.1rem;
+}
 
 @media screen and (max-width: 780px) {
   h1,
