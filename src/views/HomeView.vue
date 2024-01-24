@@ -22,6 +22,7 @@
         </div>
         <section class="logos-grid">
           <figure class="skill-container logo-hover" v-for="skill in skills" :key="skill.name">
+            <!-- I'm binding a style attribute, that is a computed property, a function that computes the color of the shadow and returns a string with the drop-shadow value  -->
             <img class="logo-img-svg" :src="skill.logo" :style="{ filter: dropShadow(skill.color) }" alt="Logo of {{skill.name}}" />
             <figcaption>
               <h3>{{ skill.name }}</h3>
