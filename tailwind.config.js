@@ -3,14 +3,20 @@ module.exports = {
   content: ["./src/**/*.vue", "index.html"],
   theme: {
     extend: {
-      boxShadow: {
-        "2xl": "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
+      colors: {
+        ocean: "#16c0b0",
+        leaf: "#84cf6a",
+        mist: "#d8d8d8",
+        midnight: "#39495c",
+        cloud: "#ffffff",
       },
-      dropShadow: {
-        "2xl": "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
+      screens: {
+        md: "860px",
       },
     },
   },
+  variants: {
+    extend: {},
+  },
   plugins: [],
 };
-

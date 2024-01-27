@@ -7,6 +7,7 @@ import ContactView from "../views/ContactView.vue"
 import AboutMeView from "../views/AboutMeView.vue"
 import ProjectsWipView from "../views/ProjectsWipView.vue"
 import ProjectsDisplayView from "../views/ProjectsDisplayView.vue"
+import ShopView from "../views/ShopView.vue"
 
 const routes = [
   {
@@ -38,6 +39,11 @@ const routes = [
     path: "/todo",
     name: "ToDo",
     component: ToDoView,
+  },
+  {
+    path: "/shop",
+    name: "Shop",
+    component: ShopView,
   },
   {
     path: "/notes/:id",

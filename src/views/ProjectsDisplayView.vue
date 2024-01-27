@@ -27,7 +27,7 @@
               make a search for a specific product and post a product to sell.
             </p>
             <nav>
-              <router-link class="link" :to="{ name: 'ProjectsWip' }"
+              <router-link class="link" :to="{ name: 'Shop' }"
                 ><p>Click here to go to the web</p>
               </router-link>
             </nav>
