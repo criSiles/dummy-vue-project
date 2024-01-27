@@ -1,6 +1,5 @@
 <template>
   <form @submit.prevent="handleSubmit">
-    <!-- TODO: Cannot add a empty to do -->
     <input type="text" placeholder="Add a to do" v-model="newTask" />
     <button type="submit">Add</button>
   </form>
@@ -8,25 +7,24 @@
 
 <script>
 import { ref } from "vue";
-import { useTaskStore } from "@/stores/TaskStore";
+import { useToDoStore } from "../stores/ToDoStore";
 
 // Composition API
 export default {
   setup() {
-    // ref makes the variable reactive
     const newTask = ref("");
     const handleSubmit = () => {
       console.log("submit");
       console.log(newTask.value);
 
-      useTaskStore().addTask({
+      useToDoStore().addTask({
         id: Math.floor(Math.random() * 10000),
         title: newTask.value,
         completed: false,
       });
       newTask.value = "";
 
-      console.log(useTaskStore().tasks);
+      console.log(useToDoStore().tasks);
     };
     return {
       newTask,
@@ -36,7 +34,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 form {
   max-width: 40rem;
   margin: 1.25rem auto; /* Responsive measurement */
@@ -46,6 +44,8 @@ form {
   grid-template-columns: 3fr 1fr; /* Adjusted grid-template-columns ratio */
   gap: 1rem; /* You can use rem for better scalability on different devices */
   padding: 1rem; /* Add some padding to the form */
+  margin-top: 5.5rem;
+  padding-bottom: 0.4rem;
 }
 
 form button {

@@ -1,72 +1,18 @@
+@tailwind utilities;
+/* @tailwind base; */
+@tailwind components;
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap");
+
 /* TODO: Organize CSS*/
 body {
   background: #f2f2f2;
-  color: #444;
   margin: 0;
 }
 body * {
   font-family: "Poppins";
 }
 
-.active {
-  background-color: orange;
-  color: white;
-  border: 2px solid orange;
-}
-/* loading state */
-.loading {
-  max-width: 640px;
-  border: 1px solid #ffd859;
-  background: #ffe9a0;
-  color: #3a3a3a;
-  padding: 5px 0;
-  text-align: center;
-  margin: 30px auto;
-}
 
-/* notes */
-.notes-section {
-  max-width: 37.5rem;
-  margin: 0 auto;
-}
 
-.notes-section h3 {
-  padding-top: 50px;
-  font-size: 1.5em;
-  margin-bottom: 5px;
-}
-
-.notes-section p {
-  color: #333;
-  margin-bottom: 20px;
-}
-
-.custom-textarea {
-  width: 100%;
-  padding: 10px;
-  font-size: 1em;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  resize: vertical;
-  /*TODO: Make notes section pretty for mobile*/
-}
-
-.notes-button {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 1em;
-  font-family: "Poppins";
-  border: 0;
-  border-radius: 6px;
-  background-color: orange;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.notes-button:hover {
-  background-color: #fff;
-  color: orange;
-}
 

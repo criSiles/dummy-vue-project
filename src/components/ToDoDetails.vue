@@ -1,25 +1,25 @@
 <template>
   <div class="task">
-    <h3>{{ task.title }}</h3>
+    <h3 :class="{ completed: task.completed }" >{{ task.title }}</h3>
     <div class="icons">
-      <i @click="taskStore.deleteTask(task.id)" class="material-icons">
+      <i @click="todoStore.deleteTask(task.id)" class="material-icons">
         delete
       </i>
       <i
-        @click="taskStore.toggleFav(task.id)"
+        @click="todoStore.toggleFav(task.id)"
         class="material-icons"
         :class="{ activeLike: task.isFav }"
       >
         favorite
       </i>
       <i
-        @click="taskStore.toggleDone(task.id)"
+        @click="todoStore.toggleDone(task.id)"
         class="material-icons"
         :class="{ activeDone: task.completed }"
       >
         done
       </i>
-      <router-link :to="{ name: 'TaskNotesView', params: { id: task.id } }">
+      <router-link :to="{ name: 'ToDoNotesView', params: { id: task.id } }">
         <i class="material-icons"> edit_note </i>
       </router-link>
     </div>
@@ -27,17 +27,22 @@
 </template>
 
 <script>
-import { useTaskStore } from "../stores/TaskStore";
+import { useToDoStore } from "../stores/ToDoStore";
 import { RouterLink } from "vue-router";
 
 export default {
   props: ["task"],
   setup() {
-    const taskStore = useTaskStore();
+    const todoStore = useToDoStore();
 
-    return { taskStore };
+    return { todoStore };
   },
 };
 </script>
 
-<style></style>
+<style>
+.completed{
+  text-decoration: line-through;
+}
+</style>
+
